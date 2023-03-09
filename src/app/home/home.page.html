@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header> Calcule seu peso ideal: </ion-list-header>
+
+      <ion-item >
+        <ion-label>Altura em metros</ion-label>
+        <ion-input type="number" [(ngModel)]="altura"></ion-input>
+      </ion-item>
+
+      <ion-radio-group [(ngModel)]="radioSelecionada">
+        <ion-item>
+          <ion-label>Homem</ion-label>
+          <ion-radio value="homem"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Mulher</ion-label>
+          <ion-radio value="mulher"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="verificar()">Verificar</ion-button>
+
+    <ion-label>{{resultado}}</ion-label>
+
+</ion-content>
+
+
+
